@@ -1,87 +1,100 @@
 @border-like: solid;
-.diva{
+.diva {
     @display-like: inline-block;
-    
     display: @display-like;
     border-style: @border-like;
 }
+
 @footer-background-color: aquamarine;
-.footer{
+.footer {
     background-color: @footer-background-color;
 }
-.images-post{
+
+.images-post {
     @width-percent: 96%;
     @padding-value: 0;
     @max-width-value: 605px;
-    
     width: @width-percent;
     padding: @padding-value;
     max-width: @max-width-value;
 }
-.images-post img{
+
+.images-post img {
     @width-percent: 100%;
     @height-like: auto;
-    
     width: @width-percent;
     height: @height-like;
 }
+
 @text-location: center;
-.text-block{
+.text-block {
     text-align: @text-location;
 }
-.fa{
+
+.fa {
     @color: blueviolet;
-    
     color: @color;
 }
-@color:blanchedalmond;
+
+@color: blanchedalmond;
 @color-for-sidebar: red;
 @border-width-value: 1px;
 @color-button-block: @color-for-sidebar + #808080;
 @background-color-article: grey;
 @info-color: #7dce80;
-.button-block{
+@height-bottom-button-block: 5px;
+.button-block {
     text-align: @text-location;
     background-color: rgb(192, 230, 220);
     overflow: hidden;
-    transition: background-color 1.5s ease 1.5s;
+    transition: height 0.5s ease 0.5s;
     position: relative;
     padding-bottom: 5px;
 }
-.button-block:hover{
-    background-color: @info-color;
+
+.button-block:hover {
+    .bottom-button-block {
+        height: 100%;
+    }
 }
+
 @float-like: left;
 @info-block-width: 100px;
-.info{
+.info {
     background-color: @info-color;
     width: @info-block-width;
     float: @float-like;
 }
-.bottom-button-block{
-    height: 5px;
-    background-color: @info-color; 
-    
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+
+@position-like: absolute;
+@bottom-value: 0px;
+.bottom-button-block {
+    @width-in-percent: 100%;
+    height: @height-bottom-button-block;
+    background-color: @info-color;
+    position: @position-like;
+    bottom: @bottom-value;
+    width: @width-in-percent;
 }
-#header{
+
+#header {
     background-color: @color;
 }
-#article{
+
+#article {
     @color: @background-color-article;
     background-color: @color;
 }
-#sidebar{
-    
+
+#sidebar {
     background-color: @color-for-sidebar;
 }
-#fix-it-up{
-    @clear-like:both;
-    
+
+#fix-it-up {
+    @clear-like: both;
     clear: @clear-like;
 }
-#number{
+
+#number {
     color: black;
 }
