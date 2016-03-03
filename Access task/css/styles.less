@@ -41,25 +41,30 @@
 @background-color-article: grey;
 @info-color: #7dce80;
 .button-block{
-    border-style: @border-like;    
     text-align: @text-location;
     background-color: rgb(192, 230, 220);
-    margin: auto;
     overflow: hidden;
     transition: background-color 1.5s ease 1.5s;
-    //display: block;
+    position: relative;
+    padding-bottom: 5px;
 }
 .button-block:hover{
     background-color: @info-color;
 }
 @float-like: left;
+@info-block-width: 100px;
 .info{
     background-color: @info-color;
-    width: 100px;
+    width: @info-block-width;
     float: @float-like;
 }
-.bottom{
-    height: 5xp;
+.bottom-button-block{
+    height: 5px;
+    background-color: @info-color; 
+    
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 #header{
     background-color: @color;
