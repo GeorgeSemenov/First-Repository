@@ -1,0 +1,38 @@
+.diva{
+    display:inline-block;
+    border-style: solid;
+}
+.footer{
+    background-color: aquamarine;
+}
+.images-post{
+    overflow:hidden;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 605px;
+}
+.images-post{
+    width: 96%;
+    padding: 0;
+    max-width: 605px;/*Чтобы контейнер , не принимал значение по длине больше , чем сама картинка(так отображается лучше)*/
+}
+.images-post img{
+    width: 100%;/*Картинка займёт всю свободную часть контейнера*/
+    height: auto;/*Чтобы картинка имела нормальную высоту , в противном случае она будет ужиматься по ширине (будет вытянутой)*/
+}
+.text-block {
+    text-align: center;
+}
+.fa{
+    font-size: 100px;
+    color: blueviolet;
+}
+#header{
+    background-color: blanchedalmond;
+}
+#article{
+    background-color: grey;
+}
+#sidebar{
+    background-color: red;
+}
