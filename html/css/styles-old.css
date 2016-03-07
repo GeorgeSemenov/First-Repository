@@ -1,14 +1,24 @@
 /*created by Alt.point 2015-2016 pro-hearthstone.ru ver 0.5.3*/
-
-
 /*<!--!!!Haters gonna hate!!!-->*/
+
+
+/*------- FONTs -------*/
+
+#body, 
+#mainnews_prev,
+#navibar_smile_string,
+.sidebar_block_news_threme {
+    font-size: 14px;
+}
+
+
+/*------- MAIN-STYLE -------*/
 
 body {
     background-color: #121212;
     background-image: url(../img/pattern_300.png);
     background-attachment: fixed;
     font-family: "Ubuntu", "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14px;
     color: #d0d0d0;
     max-width: 1220px;
     margin: 0 auto;
@@ -38,7 +48,7 @@ div img {
 /*------- NAVBAR -------*/
 
 #navibar {
-    margin: 10px auto 0 auto;
+    margin: 10px auto;
     height: 100px;
     background-color: #363636;
 }
@@ -60,6 +70,7 @@ div img {
     height: 100px;
     margin-left: 15px;
     cursor: pointer;
+    text-align: center;
 }
 
 #navibar_inner {
@@ -116,14 +127,61 @@ div img {
     text-align: center;
 }
 
+/*------- HIDE MENU -------*/
+
+.hiding_menu_body {
+    margin: 7px 0 0 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.6s;
+    display: none;
+    width: 12%;
+    max-width: 50px;
+    position: absolute;
+    z-index: 5;
+}
+
+.fa-bars {
+    font-size: 25px;
+}
+
+#hiding_menu_inner {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #363636;
+    height: 197px;
+    position: absolute;
+    z-index: 4;
+}
+
+.hiding_menu_element {
+    font-size: 19px; 
+    color: #ebcb41;
+    text-align: center;
+    margin: 5px;
+    background-color: #484848;
+}
+
+.hiding_menu_seporator {
+    height: 3px;
+    width: 40%;
+    background-color: black;
+    margin-left: 30%;
+    opacity: 0.5;
+}
+
+.fa-angle-double-down {
+    margin: 0 10px 0 0;
+}
 
 /*------- NEWS SLIDER -------*/
 
 .slider_main {
-    height: 300px;
-    margin-top: 10px;
+    margin: 10px 0;
     position: relative;
-    width: 915px;
 }
 
 #slider_h1 {
@@ -133,8 +191,13 @@ div img {
     font-size: 26px;
     line-height: 1;
     text-shadow: 2px 1px 2px black;
-    left: 340px;
     font-weight: bold;
+    width: 100%;
+}
+
+#slider_h1_inner {
+    width: 100%;
+    text-align: center;
 }
 
 #slider_layaut1 {
@@ -145,14 +208,7 @@ div img {
     background: radial-gradient(circle, #5d5d5d, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     opacity: 0.7;
 }
-#slider_layaut2 {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    background: radial-gradient(circle, #5d5d5d, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-    opacity: 0.7;
-    margin-top: -30px;
-}
+
 
 /*------- HOT NEWS -------*/
 
@@ -177,16 +233,16 @@ div img {
 }
 
 .sidebar_content_block {
-    margin: 10px 0 10px 10px;
+    margin: 0 0 10px 10px;
     background-color: #363636;
-    height: 349px;
+    height: auto;
     position: relative;
 }
 
 .sidebar_content_block_timer {
     margin: 10px 0 10px 10px;
     background-color: #363636;
-    height: 100px;
+    height: auto;
     position: relative;
 }
 
@@ -230,16 +286,14 @@ div img {
 }
 
 .sidebar_block_news_threme {
-    font-size: 14px;
     color: #ebcb41;
     padding-right: 5px;
 }
 
 .color_block {
-    position: absolute;
     bottom: 0;
     text-align: center;
-    height: 40px;
+    height: 30px;
     width: 100%;
     cursor: pointer;
     text-shadow: 1px 1px 1px black;
@@ -260,13 +314,6 @@ div img {
     height: 5px;
     width: 100%;
     transition: 0.1s linear;
-}
-
-.sidebar_content_block_bluetweets {
-    margin: 10px 0 10px 10px;
-    background-color: #363636;
-    height: 322px;
-    position: relative;
 }
 
 .sidebar_bliz_bluetweets {
@@ -323,23 +370,24 @@ div img {
 /*------- MAIN NEWS -------*/
 
 .mainnews_block {
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
     text-align: center;
     background-color: #363636;
-    height: 250px;
-}
-
-.mainnews_block_pic {
-    background-image: url(../img/slider_img.jpg);
-    background-repeat: no-repeat;
+    position: relative;
+    display: inline-flex;
 }
 
 .mainnews_pic_block {
-    display: inline-block;
-    float: left;
-    background-color: #484848;
-    height: 240px;
-    width: 240px;
+    margin: 5px 0 5px 5px;
+}
+
+.mainnews_pic_block_inner {
+    width: 100%;
+    height: auto;
+}
+
+.mainnews_text_inner{
+    //position: relative;
     margin: 5px;
 }
 
@@ -351,6 +399,7 @@ div img {
     color: #d0d0d0;
     margin: 0 5px 5px;
     text-align: justify;
+    padding-bottom: 40px;
 }
 
 .mainnews_tags {
@@ -373,11 +422,11 @@ div img {
     color: #ffffff;
     text-align: left;
     height: 40px;
-    width: 10%;
+    width: 60px;
 }
 
-.fa-commenting-o,
-.fa-eye {
+#mainnews_colorbutton_socialico .fa-commenting-o,
+#mainnews_colorbutton_socialico .fa-eye {
     padding-top: 4px;
     margin: 0 0 0 8px;
 }
@@ -386,9 +435,9 @@ div img {
     background-color: #484848;
     position: absolute;
     text-align: center;
-    width: 660px;
+    width: 100%;
     height: 40px;
-    right: 5px;
+    bottom: 0px;
     cursor: pointer;
 }
 
@@ -397,10 +446,10 @@ div img {
 }
 
 .mainnews_colorbutton_inner {
-    position: absolute;
-    bottom: 0;
+    position: absolute;//Без этого - нельзя прижать этот блок к полу.
+    bottom: 0;//Вот так он и прижимается.
     background: #4d52bf;
-    color: #4d52bf;//Непонятно , зачем устанавливать цвет текста элемента?
+    color: #4d52bf;
     text-align: center;
     height: 5px;
     width: 100%;
@@ -453,3 +502,59 @@ div img {
     background-color: #363636;
     text-align: center;
 }
+
+/*------- ADAPTIV -------*/
+
+
+@media screen and (max-width: 600px) {
+    #slider_h1 {
+        font-size: 1.4em;
+    }
+    #slider_layaut1 {
+        height: 21px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #footer {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #body, 
+    #mainnews_prev, 
+    .sidebar_block_news_threme {
+        font-size: 13xp;
+    }
+    #mainnews_h1 {
+        font-size: 1.5em;
+    }
+    #body {
+        max-width: 910px;
+    }
+    .hiding_menu_body {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #body, 
+    #mainnews_prev, 
+    .sidebar_block_news_threme {
+        font-size: 13px;
+    }
+    .sidebar_bliz_bluetweets {
+        font-size: 12px;
+    }
+    .navi_content {
+        padding: 3px 3px;
+    }
+}
+
+
+
+
+
+
+

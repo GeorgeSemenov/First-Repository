@@ -48,18 +48,20 @@
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="article">
                         <p>
                             СТАТЬЯ.
-                        <div class="button-block">
-                            <div class="info">
-                                <i class="fa fa-gamepad">&nbsp;<span id="number">10</span></i>
-                                <br>
-                                <i class="fa fa-hand-peace-o">&nbsp;<span id="number">5</span></i>
-                            </div>
-                                <p>Press me like a spartanians!</p>
-                            <div class="bottom-button-block" >
-                            </div>
-                            <!--<div id="fix-it-up"></div>
+                            <div class="button-block">
+                                <div class="bottom-button-block">
+                                </div><!--В этом всё дело! Если этот блок будет внизу , то оказывается как будто ниже остальных div-ов , в button-block ,  поэтому , если он в будущем расползётся на весю кнопку , то не закроет текст , а только заменит background-color в блоках , где последний не указан. Всё дело в том , что я указал position отличную от значения по умолчания , это значит , что они будут отображаться так ,буд-то остальных элементов и нет вовсе.-->
+                                <div class="info">
+                                    <i class="fa fa-gamepad">&nbsp;<span id="number">10</span></i>
+                                    <br>
+                                    <i class="fa fa-hand-peace-o">&nbsp;<span id="number">5</span></i>
+                                </div>
+                                <div class="text-button">
+                                    <p>Press me like a spartanians!</p>
+                                </div>
+                                <!--<div id="fix-it-up"></div>
                             Этот блок нужен для того ,чтобы div.info не вылезал по вертикали за границу div.button-block . Это решение я нашёл тут : http://www.positioniseverything.net/easyclearing.html почитав предварительно http://www.sitepoint.com/simple-clearing-of-floats/-->
-                        </div>
+                            </div>
                             <br>Трепещите смертные ! Зло пришло в этот мир!
                         </p>
                         <div class="images-post"> <img src="img/Burning_eyes.jpg" width="604" height="453" /> </div>

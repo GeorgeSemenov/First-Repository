@@ -5,25 +5,29 @@
 <html lang="ru">
 
 <head>
-    <title>Pro-hearthstone.ru</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pro-hearthstone.ru</title>
     <link rel="shortcut icon" href="../html/img/favicon.png" type="icon">
     <link rel="stylesheet" href="../html/css/font-awesome-4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,300,300italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fotorama.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link  href="css/slider_style.css" rel="stylesheet">
     
+<!--    FOTORAMA DLYA DIMONA-->
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/fotorama.js"></script>
-    <script src="js/menu.js"></script> 
+    <link  href="css/fotorama.css" rel="stylesheet">
+<!--    ZAEBA GRESHNAYA ON!...-->
+
+
 </head>
 
 <body>
     <header>
-        <div class="row" id="navibar">
+        <div id="navibar">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                 <div class="site_logo">
                     <a href="../html/index.html">
@@ -33,7 +37,9 @@
             </div>
             <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
                 <div id="navibar_inner">
-                    <div class="navi_content"><a href="../html/index.html">Главная</a></div>
+                    <a href="../html/index.html">
+                        <div class="navi_content">Главная</div>
+                    </a>
                     <div class="navi_seporator"></div>
                     <div class="navi_content">Новости</div>
                     <div class="navi_seporator"></div>
@@ -56,53 +62,184 @@
                 </div>
             </div>
             <div id="navibar_backline"></div>
-            <div id="navibar_backline_real">
-                <div class="hiding_menu_body">
-                <i class="fa fa-bars"></i>
-                </div>
-                <ul id="hiding_menu_inner">
-                    <li class="hiding_menu_element"><a href="../html/index.html">Главная</a></li>
-                    <li class="hiding_menu_element">Новости</li>
-                    <li class="hiding_menu_element">Руководства</li>
-                    <li class="hiding_menu_element">Дополнения</li>
-                    <li class="hiding_menu_element">Арена</li>
-                    <li class="hiding_menu_element">О нас</li>
-                </ul>
-            </div>
+            <div id="navibar_backline_real"></div>
         </div>
     </header>
-    
-    <wrapper class="row">
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <div>
+        <div id="mainNewsBlock" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <div class="slider_main">
-                <div id="slider_h1">
-                    <div id="slider_h1_inner">В центре внимания</div>
-                </div>
+                <div id="slider_h1">В центре внимания</div>
                 <div id="slider_layaut1"></div>
                 <div class="slider">
-                    <div class="fotorama" data-autoplay="false" data-stopautoplayontouch="false"  data-loop="true" data-nav="dots" data-click="false" data-swipe="false">
-                        <img src="img/slider_img.jpg">
+                    <div class="fotorama" data-autoplay="true" data-stopautoplayontouch="false"  data-loop="true" data-nav="dots" data-click="false" data-swipe="false">
+                        <div data-img="img/slider_img.jpg"><a href="../html/index.html"></a></div>
+<!--                        <img src="img/slider_img.jpg">-->
                         <img src="img/slider_img2.jpeg">
                         <img src="img/slider_img3.jpg">
                         <img src="img/slider_img4.jpg">
                         <img src="img/slider_img5.jpg">
                     </div>
                 </div>
+<!--                <div id="slider_layaut2"></div>-->
             </div>
             <div class="mainnews_block">
-                <div class="hidden-xs hidden-sm col-md-3 mainnews_pic_block">
-                    <img class="mainnews_pic_block_inner" src="../html/img/news_pic1.jpg">
+                <div id="mainnews_pic_block1" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic1.jpg">
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-9 mainnews_text_inner">
-                    <h1 id="mainnews_h1">Новая серия турниров Game Show Open</h1>
-                    <p id="mainnews_prev">Едва успели завершиться LAN-финалы второго сезона, а организация Game Show совместно с Tele2 анонсируют новую серию турниров Game Show Open. Лига не стоит на месте, развиваясь с каждым новым турниром. Первый сезон доказал, что все препятствия (высокий пинг, разница во времени, участие профессиональных игроков в турнирах для новичков на равных условиях) можно преодолеть. </p>
-                    <div class="mainnews_colorbutton">
-                        <div id="mainnews_colorbutton_text">Читать далее</div>
-                        <div class="mainnews_colorbutton_inner"></div>
-                        <div id="mainnews_colorbutton_socialico">
-                            <i class="fa fa-commenting-o"></i> 1233
-                            <br><i class="fa fa-eye"></i> 123
-                        </div>
+                <h1 id="mainnews_h1">Новая серия турниров Game Show Open</h1>
+                <div class="mainnews_tags">
+                    <div class="mainnews_tags_body">Турнир</div>
+                    <div id="yellow" class="mainnews_tags_body">Новости</div>
+                    <div id="blue" class="mainnews_tags_body">Интересно</div>
+                </div>
+                <div id="mainnews_prev">Едва успели завершиться LAN-финалы второго сезона, а организация Game Show совместно с Tele2 анонсируют новую серию турниров Game Show Open. Лига не стоит на месте, развиваясь с каждым новым турниром. Первый сезон доказал, что все препятствия (высокий пинг, разница во времени, участие профессиональных игроков в турнирах для новичков на равных условиях) можно преодолеть. Второй сезон предоставил непрофессиональным командам возможность выиграть «пропуск» на большой турнир, чтобы побороться с настоящими звездами киберспорта. Этот сезон поможет игрокам...</div>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 1233
+                        <br><i class="fa fa-eye"></i> 123
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block2" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic2.jpg">
+                </div>
+                <h1 id="mainnews_h1">Различные Турнирные Форматы Хартстоун</h1>
+                <p id="mainnews_prev">Хартстоун — это гораздо больше, чем просто ладдер. Тысячи игроков по всему миру участвуют в турнирах каждую неделю, начиная от казуальных онлайн-турниров и заканчивая чрезвычайно популярными лайв-ивентами. Несмотря на то, что Хартстоун появился сравнительно недавно, турниры, доступные игрокам, присутствуют в самых разных форматах. Эти форматы касаются не только структуры турнира, но также определяют то, как будут проходить индивидуальные матчи между игроками. Хотя раньше каждый турнир использовал формат Last Hero Standing, в прошедшем году формат матчей практически полностью поменялся на Conquest. Даже Blizzard недавно изменили формат...</p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 437
+                        <br><i class="fa fa-eye"></i> 3273
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block3" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic3.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 33
+                        <br><i class="fa fa-eye"></i> 8
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block4" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic4.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 133
+                        <br><i class="fa fa-eye"></i> 228
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block5" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic5.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 2333
+                        <br><i class="fa fa-eye"></i> 18
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block1" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic1.jpg">
+                </div>
+                <h1 id="mainnews_h1">Новая серия турниров Game Show Open</h1>
+                <p id="mainnews_prev">Едва успели завершиться LAN-финалы второго сезона, а организация Game Show совместно с Tele2 анонсируют новую серию турниров Game Show Open. Лига не стоит на месте, развиваясь с каждым новым турниром. Первый сезон доказал, что все препятствия (высокий пинг, разница во времени, участие профессиональных игроков в турнирах для новичков на равных условиях) можно преодолеть. Второй сезон предоставил непрофессиональным командам возможность выиграть «пропуск» на большой турнир, чтобы побороться с настоящими звездами киберспорта. Этот сезон поможет игрокам-новичкам если не показать себя, то, как минимум, основательно подготовиться к третьему сезону Game Show Open...</p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 1233
+                        <br><i class="fa fa-eye"></i> 123
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block2" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic2.jpg">
+                </div>
+                <h1 id="mainnews_h1">Различные Турнирные Форматы Хартстоун</h1>
+                <p id="mainnews_prev">Хартстоун — это гораздо больше, чем просто ладдер. Тысячи игроков по всему миру участвуют в турнирах каждую неделю, начиная от казуальных онлайн-турниров и заканчивая чрезвычайно популярными лайв-ивентами. Несмотря на то, что Хартстоун появился сравнительно недавно, турниры, доступные игрокам, присутствуют в самых разных форматах. Эти форматы касаются не только структуры турнира, но также определяют то, как будут проходить индивидуальные матчи между игроками. Хотя раньше каждый турнир использовал формат Last Hero Standing, в прошедшем году формат матчей практически полностью поменялся на Conquest. Даже Blizzard недавно изменили формат своих официальных турниров...</p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 437
+                        <br><i class="fa fa-eye"></i> 3273
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block3" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic3.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 33
+                        <br><i class="fa fa-eye"></i> 8
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block4" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic4.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 133
+                        <br><i class="fa fa-eye"></i> 228
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div id="mainnews_pic_block5" class="mainnews_pic_block">
+                    <img src="../html/img/news_pic5.jpg">
+                </div>
+                <h1 id="mainnews_h1">Матчапы арены: Убить Джайну</h1>
+                <p id="mainnews_prev">В этой серии выпусков мы подробно рассмотрим наиболее значимые и популярные карты и комбинации каждого класса, а также поговорим о том, как следует играть вокруг них. И самое главное, проанализируем слабые места, наметим план, как по ним бить. Маг, представленный в лице Джайны Праудмур, являлся самым популярным и доминирующим классом на арене до выхода «Большого турнира», после которого слетел со своего трона, но, несмотря на это, все еще представляет серьезную угрозу. Итак, давайте обсудим уязвимые места Мага на Арене, и как их использовать против него. Волна огня. Эффектная, громкая, а иногда и очень болезненная. Даже несмотря на то, что после выхода «Большого турнира» общее количество карт увеличилось...
+                </p>
+                <div class="mainnews_colorbutton">
+                    <div id="mainnews_colorbutton_text">Читать далее</div>
+                    <div class="mainnews_colorbutton_inner"></div>
+                    <div id="mainnews_colorbutton_socialico">
+                        <i class="fa fa-commenting-o"></i> 2333
+                        <br><i class="fa fa-eye"></i> 18
                     </div>
                 </div>
             </div>
@@ -150,7 +287,7 @@
                         <div class="color_box_guides"></div>
                     </div>
                 </div>
-                <div class="sidebar_content_block">
+                <div class="sidebar_content_block_bluetweets">
                     <div id="sidebar_block_name">Blue Tweets</div>
                     <div class="sidebar_bliz_bluetweets">Tavern Brawl release times are changing. Take a look at the new schedule: blizz.ly/1Qr9kJb pic.twitter.com/mru01wA19L</div>
                     <div class="sidebar_bliz_bluetweets_info">3 дня назад, Автор: Hearthstone</div>
@@ -161,8 +298,8 @@
                     <div class="sidebar_bliz_bluetweets">On the second day of Winter Veil, the Innkeep sent to me, two Boom Bots! #Hearthstone pic.twitter.com/dk22gszJT6</div>
                     <div class="sidebar_bliz_bluetweets_info">15 дня назад, Автор: Hearthstone</div>
                     <div class="color_block">
-                    <div id="color_box_text">Смотреть все Blue Tweets</div>
-                    <div class="color_box_bluetweets"></div>
+                        <div id="color_box_text">Смотреть все Blue Tweets</div>
+                        <div class="color_box_bluetweets"></div>
                     </div>
                 </div>
                 <div class="sidebar_content_block">
@@ -209,8 +346,7 @@
                 </div>
             </div>
         </div>
-    </wrapper>
-    
+    </div>
     <footer>
         <div class="col-md-12 col-sm-12 col-lg-12">
             <div id="footer">Разработка и реализация <a href="www.vk.com/altdja">Alt team</a> 2015г.</div>

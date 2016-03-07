@@ -42,20 +42,19 @@
 @color-button-block: @color-for-sidebar + #808080;
 @background-color-article: grey;
 @info-color: #7dce80;
-@height-bottom-button-block: 5px;
+@height-button-block: 45px;
 .button-block {
     text-align: @text-location;
     background-color: rgb(192, 230, 220);
     overflow: hidden;
-    transition: height 0.5s ease 0.5s;
     position: relative;
     padding-bottom: 5px;
+    cursor: pointer;
+    height: @height-button-block;
 }
 
-.button-block:hover {
-    .bottom-button-block {
-        height: 100%;
-    }
+.button-block:hover .bottom-button-block{
+    height: 100%;
 }
 
 @float-like: left;
@@ -63,11 +62,23 @@
 .info {
     background-color: @info-color;
     width: @info-block-width;
-    float: @float-like;
+    position: absolute;
+    left: 0;
+}
+
+.text-button{
+    text-shadow: 1px 1px 3px black;
+    font-size: 20px;
+    color: #69117e;
+    text-align: center;
+    margin-top: 5px;    
+    margin-left: @info-block-width;
+    position: absolute;
 }
 
 @position-like: absolute;
 @bottom-value: 0px;
+@height-bottom-button-block: 5px;
 .bottom-button-block {
     @width-in-percent: 100%;
     height: @height-bottom-button-block;
@@ -75,6 +86,7 @@
     position: @position-like;
     bottom: @bottom-value;
     width: @width-in-percent;
+    transition: 0.2s linear;
 }
 
 #header {

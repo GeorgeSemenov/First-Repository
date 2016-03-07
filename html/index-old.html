@@ -1,0 +1,221 @@
+<!--/*created by Alt.point 2015-2016 pro-hearthstone.ru ver 0.5.3*/-->
+<!--!!!Haters gonna hate!!!-->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Pro-hearthstone.ru</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../html/img/favicon.png" type="icon">
+    <link rel="stylesheet" href="../html/css/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,300,300italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fotorama.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/fotorama.js"></script>
+    <script src="js/menu.js"></script> 
+</head>
+
+<body>
+    <header>
+        <div class="row" id="navibar">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="site_logo">
+                    <a href="../html/index.html">
+                        <img src="../html/img/logo-hspro.png" width="290px">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+                <div id="navibar_inner">
+                    <div class="navi_content"><a href="../html/index.html">Главная</a></div>
+                    <div class="navi_seporator"></div>
+                    <div class="navi_content">Новости</div>
+                    <div class="navi_seporator"></div>
+                    <div class="navi_content">Руководства</div>
+                    <div class="navi_seporator"></div>
+                    <div class="navi_content">Дополнения</div>
+                    <div class="navi_seporator"></div>
+                    <div class="navi_content">Арена</div>
+                    <div class="navi_seporator"></div>
+                    <div class="navi_content">О нас</div>
+                </div>
+                <div id="navibar_smile_string">Проходи, проходи, только дверь закрой...дует</div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+                <div class="search_block">
+                    <form action="">
+                        <input id="search_field" type="text" size="20" placeholder="Поиск по сайту...">
+                        <input id="search_buttom" type="submit" value="Поиск">
+                    </form>
+                </div>
+            </div>
+            <div id="navibar_backline"></div>
+            <div id="navibar_backline_real">
+                <div class="hiding_menu_body">
+                <i class="fa fa-bars"></i>
+                </div>
+                <ul id="hiding_menu_inner">
+                    <li class="hiding_menu_element"><a href="../html/index.html">Главная</a></li>
+                    <li class="hiding_menu_element">Новости</li>
+                    <li class="hiding_menu_element">Руководства</li>
+                    <li class="hiding_menu_element">Дополнения</li>
+                    <li class="hiding_menu_element">Арена</li>
+                    <li class="hiding_menu_element">О нас</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <wrapper class="row">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="slider_main">
+                <div id="slider_h1">
+                    <div id="slider_h1_inner">В центре внимания</div>
+                </div>
+                <div id="slider_layaut1"></div>
+                <div class="slider">
+                    <div class="fotorama" data-autoplay="false" data-stopautoplayontouch="false"  data-loop="true" data-nav="dots" data-click="false" data-swipe="false">
+                        <img src="img/slider_img.jpg">
+                        <img src="img/slider_img2.jpeg">
+                        <img src="img/slider_img3.jpg">
+                        <img src="img/slider_img4.jpg">
+                        <img src="img/slider_img5.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="mainnews_block">
+                <div class="hidden-xs hidden-sm col-md-3 mainnews_pic_block">
+                    <img class="mainnews_pic_block_inner" src="../html/img/news_pic1.jpg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 mainnews_text_inner">
+                    <h1 id="mainnews_h1">Новая серия турниров Game Show Open</h1>
+                    <p id="mainnews_prev">Едва успели завершиться LAN-финалы второго сезона, а организация Game Show совместно с Tele2 анонсируют новую серию турниров Game Show Open. Лига не стоит на месте, развиваясь с каждым новым турниром. Первый сезон доказал, что все препятствия (высокий пинг, разница во времени, участие профессиональных игроков в турнирах для новичков на равных условиях) можно преодолеть. </p>
+                    <div class="mainnews_colorbutton">
+                        <div id="mainnews_colorbutton_text">Читать далее</div>
+                        <div class="mainnews_colorbutton_inner"></div>
+                        <div id="mainnews_colorbutton_socialico">
+                            <i class="fa fa-commenting-o"></i> 1233
+                            <br><i class="fa fa-eye"></i> 123
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page_navigation">
+                <div id="page_navigation_buttoms_back"> В начало </div>
+                <div id="page_navigation_number_buttoms">1</div>
+                <div id="page_navigation_number_buttoms">2</div>
+                <div id="page_navigation_number_buttoms">3</div>
+                <div id="page_navigation_buttoms_next"> Далее </div>
+            </div>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+            <div id="sidebar">
+                <div class="sidebar_content_block">
+                    <div id="sidebar_block_name">Популярные руководства:</div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic1.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Новая серия турниров Game Show Open</div>
+                            <div>3 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic2.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Различные Турнирные Форматы Хартстоун</div>
+                            <div>4 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic3.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Матчапы арены: Убить Джайну</div>
+                            <div>3 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="color_block">
+                        <div id="color_box_text">Все руководства</div>
+                        <div class="color_box_guides"></div>
+                    </div>
+                </div>
+                <div class="sidebar_content_block">
+                    <div id="sidebar_block_name">Blue Tweets</div>
+                    <div class="sidebar_bliz_bluetweets">Tavern Brawl release times are changing. Take a look at the new schedule: blizz.ly/1Qr9kJb pic.twitter.com/mru01wA19L</div>
+                    <div class="sidebar_bliz_bluetweets_info">3 дня назад, Автор: Hearthstone</div>
+                    <div class="sidebar_bluepost_seporator"></div>
+                    <div class="sidebar_bliz_bluetweets">Win the Winter Veil Wreath card back in this week's Tavern Brawl, coming soon! #Hearthstone blizz.ly/1I71cLi pic.twitter.com/SRgubZbgcA</div>
+                    <div class="sidebar_bliz_bluetweets_info">4 дня назад, Автор: Hearthstone</div>
+                    <div class="sidebar_bluepost_seporator"></div>
+                    <div class="sidebar_bliz_bluetweets">On the second day of Winter Veil, the Innkeep sent to me, two Boom Bots! #Hearthstone pic.twitter.com/dk22gszJT6</div>
+                    <div class="sidebar_bliz_bluetweets_info">15 дня назад, Автор: Hearthstone</div>
+                    <div class="color_block">
+                    <div id="color_box_text">Смотреть все Blue Tweets</div>
+                    <div class="color_box_bluetweets"></div>
+                    </div>
+                </div>
+                <div class="sidebar_content_block">
+                    <div id="sidebar_block_name">Популярные видео:</div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic1.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Новая серия турниров Game Show Open</div>
+                            <div>3 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic2.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Различные Турнирные Форматы Хартстоун</div>
+                            <div>4 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="sidebar_block_news">
+                        <div id="sidebar_block_news_pic">
+                            <img class="sidebar_block_news_pic_inner" src="../html/img/news_pic3.jpg">
+                        </div>
+                        <div class="sidebar_block_news_text">
+                            <div class="sidebar_block_news_threme">Матчапы арены: Убить Джайну</div>
+                            <div>3 дня назад, Автор: Hearthstone</div>
+                        </div>
+                    </div>
+                    <div class="color_block">
+                        <div id="color_box_text">Все видео</div>
+                        <div class="color_box_guides"></div>
+                    </div>
+                </div>
+                <div class="sidebar_content_block_timer">
+                    <div id="sidebar_block_name">До следующей потосовки осталось:</div>
+                    <div id="sidebar_content_block_timer_font">75:43:12</div>
+                    <div class="color_block">
+                        <div id="color_box_text">Описание потосовки этой недели</div>
+                        <div class="color_box_guides"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </wrapper>
+    
+    <footer>
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <div id="footer">Разработка и реализация <a href="www.vk.com/altdja">Alt team</a> 2015г.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
