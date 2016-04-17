@@ -23,15 +23,23 @@ $strNonSpaces = str_replace(" ","",$str);
 echo $strNonSpaces;*/
 
 //Копируем часть строки в другую переменную
-$str = "Креветки плывут в рот";
+/*$str = "Креветки плывут в рот";
 $cutStr = mb_substr($str,5,5,'UTF-8');
-echo $cutStr;
+echo $cutStr;*/
 
 //Теперь пора браться за саму работу.
 
-$str = "Сюда вводится строка для проверки на палиндром";
-
-function search_palindrom ($str){
-    echo "привет , как дела";
+function isPalindrom($str){
+   $isPalindrom=false;
+   if(mb_strtolower($str) == mb_strtolower(revStr($str))){
+   $isPalindrom=true;
 }
+   return $isPalindrom;
+}
+
+$str = "Сюда вводится строка для проверки на палиндром";
+$originalLength = mb_strlen($str,'UTF-8');
+n=0;
+//for($i=0;i
+
 ?>
