@@ -38,6 +38,7 @@ function revStr($str){
 
 function isPalindrom($str){
    $isPalindrom=false;
+   $str = str_replace(" ","",$str);
    if(mb_strtolower($str,'UTF-8) == mb_strtolower(revStr($str,'UTF-8'))){
    $isPalindrom=true;
 }
