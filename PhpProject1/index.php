@@ -29,9 +29,16 @@ echo $cutStr;*/
 
 //Теперь пора браться за саму работу.
 
+function revStr($str){
+   $str=iconv('utf-8', 'utf-16le',$str);
+   $str=strrev ($invertStr);
+   $str=iconv('utf-16be', 'utf-8',$invertStr);
+   return $str;
+}
+
 function isPalindrom($str){
    $isPalindrom=false;
-   if(mb_strtolower($str) == mb_strtolower(revStr($str))){
+   if(mb_strtolower($str,'UTF-8) == mb_strtolower(revStr($str,'UTF-8'))){
    $isPalindrom=true;
 }
    return $isPalindrom;
