@@ -1,53 +1,48 @@
+/*Задача : указывается строка в переменную $str . Далее приложение должно определить
+является ли данная строка палиндромом , если да то выводит всю строку 
+если же нет , то находится максимально длинная подстрока , являющаяся палиндромом.
+Если же таковой нет , то выводится первый символ строки.*/
 <?php
-/*echo mb_strlen($string,'UTF-8');//Подсчитаем длину строки
-
-//Мастерский переворот строки!!!
-$str = '123разДваТри\?';
-$invertStr = iconv('utf-8', 'utf-16le',$str);
-$invertStr = strrev ($invertStr);
-$invertStr = iconv('utf-16be', 'utf-8',$invertStr);
-echo $invertStr;
-//Инфа отсюда : http://bolknote.ru/2012/04/02/~3625#56
- 
-
-//Сравнение строk
-$a = 'Ха хашка';
-$b = 'хА хАшка';
-if(mb_strtolower($a,'UTF-8') == mb_strtolower($b,'UTF-8'))
-{echo "Строки совпадают";}
-else {echo "Строки не совпадают";}*/
-
-//убираем пробел из строки.
-/*$str = "Пирчет мойя звать ЖИРИ жирный ыыыы  ";
-$strNonSpaces = str_replace(" ","",$str);
-echo $strNonSpaces;*/
-
-//Копируем часть строки в другую переменную
-/*$str = "Креветки плывут в рот";
-$cutStr = mb_substr($str,5,5,'UTF-8');
-echo $cutStr;*/
-
-//Теперь пора браться за саму работу.
-
+//блок схема : http://i.imgur.com/RmTd11z.png
 function revStr($str){
    $str=iconv('utf-8', 'utf-16le',$str);
-   $str=strrev ($invertStr);
-   $str=iconv('utf-16be', 'utf-8',$invertStr);
+   $str=strrev ($str);
+   $str=iconv('utf-16be', 'utf-8',$str);
    return $str;
 }
 
 function isPalindrom($str){
    $isPalindrom=false;
    $str = str_replace(" ","",$str);
-   if(mb_strtolower($str,'UTF-8) == mb_strtolower(revStr($str,'UTF-8'))){
+   if((mb_strtolower($str,'UTF-8') == mb_strtolower(revStr($str),'UTF-8'))&&(mb_strlen($str,'UTF-8')!=1)){
    $isPalindrom=true;
 }
    return $isPalindrom;
 }
 
-$str = "Сюда вводится строка для проверки на палиндром";
-$originalLength = mb_strlen($str,'UTF-8');
-n=0;
-//for($i=0;i
-
+$str = "Потенциальны палиндром вводится сюда.";
+$length = $originalLength = mb_strlen($str,'UTF-8');
+$n=0;
+while ($length > 1)
+{
+    $chStr = mb_substr($str,$n,$length,'UTF-8');
+    $chStr = str_replace(" ","",$chStr);
+    if ((mb_strlen($chStr,'UTF-8') == 0) && ($length == $originalLength)){//Это условие может быть выполенно только в первую итерацию цикла while, т.к. далее $length будет только уменьшаться.
+        echo "В проверяемой строке нет символов , кроме пробелов. Приложение будет остановлено";
+        break ;
+    }else if (isPalindrom($chStr)){
+        break ;
+    }else {
+        if (($n + $length)<$originalLength){
+            $n++;
+        }else{
+            $length--;
+            $n=0;
+            if ($length == 1) {
+                break ;
+            }
+        }
+    }
+}
+echo mb_substr($str,$n,$length,'UTF-8');
 ?>
