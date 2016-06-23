@@ -8,8 +8,6 @@ Unordered
 
 Ordered
 
-1. Item 1
-2. Item 2
 * Item 3
    1 item 3.1
    * Item 3a
